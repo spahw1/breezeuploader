@@ -21,52 +21,76 @@
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="js/flexslider/flexslider.css">
 <link rel="stylesheet" href="css/colorblocks-style.css">
-
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 <!-- end CSS-->
     
 <!-- JS-->
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
 <!-- end JS-->
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+</head>
+
+<body id="home">
+
+  
+<!-- header area -->
+    <header class="wrapper clearfix">
+	<nav id="topnav" role="navigation">
+
+		  <div class="menu-toggle">Beta v1.9</div> 
+		</nav> 
+        <div id="banner">        
+        	<div id="logo" style="padding-top=10px"><a href="index.html"><img src="img/logo-shadowpact.gif" alt="logo" ></a></div> 
+        </div>
+      
+  
+    </header><!-- end header -->  
+        <!-- main navigation -->
        
-        <title>Upload Form</title>
-    </head>
-    <body>
-        <div class="app">
-		<!--	<section id="page-header" class="clearfix"> 	   
-			<div class="wrapper">
-			<a href="index.html"><img src="img/button-home2.png" alt="logo" width="70px" height="60px" align="center"></a>
-			  <h1> Breeze Uploader</h1>
-			  </div> -->
-			
-			</section><!-- end hero area -->
+ 
+ 
+<!-- hero area (the grey one with a slider -->
+    <section id="page-header" class="clearfix">    
+   
+    <div class="wrapper">
+      <h2>Scene7 Image Uploader</h2>
+    </div>
+    </section><!-- end hero area -->
+
+
+
+
+
+<!-- main content area -->   
+   
+<div id="main" class="wrapper clearfix">    
+
+    <!-- sidebar -->    
+    <div class="div-menu" style="height:230px">
+        
             
-	<div class="menu-toggle">Upload Image To Scene7</div>
-		<form method="POST" enctype="multipart/form-data" name="image_upload" id="image_upload" onSubmit="return uploadImage();">
+       <form method="POST" enctype="multipart/form-data" name="image_upload" id="image_upload" onSubmit="return uploadImage();">
 			<table class="current">				
 				<tr>
 					<td colspan="2"></td>
 				</tr>
 				<tr>
-					<td><strong> Company Name</strong></td><td>
+					<td><strong>Company</strong></td><td>
 					<input type="text" value = "mandstest" size="15" name="company_name">
 					</td>
 				</tr>
 				<tr>
-					<td><strong> Upload Token </strong></td><td>
+					<td><strong>Token</strong></td><td>
 					<input type="text" size="15" name="upload_token">
 					</td>
 				</tr>
 				<tr>
-					<td><strong> File Size Limit (in bytes) </strong></td><td>
-					<input type="text" size="15" value= "2000" name="file_limit">
-					&nbsp;bytes</td>
+					<td><strong>File Size Limit (bytes)</strong></td><td>
+					<input type="text" size="15" value= "2000" name="file_limit"></td>
 				</tr>
 				<tr>
-					<td><strong> File Extensions allowed </strong></td><td>
-					<input type="text" value="JPG" size="15" name="file_exts">
+					<td><strong></strong></td><td>
+					<input type="hidden" value="JPG" size="15" name="file_exts">
 					</td>
 				</tr>
 				<!--<tr>
@@ -107,7 +131,7 @@
 				<tr>
 					<td><strong> Tolerance</strong></td><td>
 					<input type="text" size="5" name="tolerance">
-					&nbsp;(value between 0 and 1)</td>
+					&nbsp;(between 0 and 1)</td>
 				</tr>
 				<!--<tr style="display=none">
 					<td><strong> Fill Method</strong></td><td>
@@ -118,18 +142,19 @@
 				</tr>-->
 				
 				<tr>
-					<td><strong>File to upload: : </strong></td>
+					<td><strong>File: </strong></td>
 					<td>
 					<input name="filename" type="file" id="filename" size="58" maxlength="1024" />
-					</td>
+					</td> 
+					
 				</tr>
 				<tr>
 					<td colspan="2"></td>
 				</tr>
 				<tr>
-					<td><strong>Click Submit to upload your image: </strong></td>
+					<td><strong></strong></td>
 					<td>
-					<input type="submit" value="Submit">
+					<input type="submit" value="Submit" class="menu-button--small ;align:center">
 					</td>
 				</tr>
 			</table>
@@ -144,20 +169,49 @@
 		<script language="javascript">
 			function uploadImage() {
 	
+
 				document.image_upload.action = "https://s7ugc3.scene7.com/ugc/image?op=upload&company_name=" + document.image_upload.company_name.value + 
 												"&upload_token=" + document.image_upload.upload_token.value + 
 												"&file_limit=" + document.image_upload.file_limit.value + 
 												"&file_exts=" + document.image_upload.file_exts.value + 
 												"&preserve_colorprofile=Yes" + 
 												"&preserve_filename=Yes&use_corner=ul&knockout_background=false&fill_method=ff";
+				
+				
+				
 				return true;
 			}
-		</script>
+		</script>                
+                  
+            
+      </div><!-- #end sidebar -->
+    
+    
+    
+</div><!-- #end div #main .wrapper -->
+
+
+
+
+
+<!-- footer area -->    
+<footer>
+	<div id="colophon" class="wrapper clearfix">
+    	Copyright
+    </div>
+    
+   
+</footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
 
 </body>
 </html>
-
-	
-	
-	
-

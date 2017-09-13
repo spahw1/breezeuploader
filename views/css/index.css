@@ -1,0 +1,35 @@
+.menu-button{ 
+	height:70px; width:250px ;background: #b4cc51 ; border-color: #a1b748; border:1px solid; border-radius:10px; margin:10px 0
+}
+
+a.anchor-button{ 
+	text-decoration:none ; color:#000
+}
+
+.div-menu{ 
+	width:100%;margin:50px auto; height:300px; text-align:center
+}
+
+.menu-button--small{ 
+	height:44px; width:120px ;background: #b4cc51 ; border-color: #a1b748; border:1px solid; border-radius:10px; margin:10px 0
+}
+
+.div-margin{ 
+	margin:5px 5px
+}
+
+.div-margin label{ 
+	width:30%
+}
+
+.div-margin input {
+	width: 95%;
+    margin: 5px auto;
+    border: 1px solid;
+    height: 44px;
+    font-size: 18px;
+}
+
+#page-header h2 {
+	text-align : center;
+}

@@ -1,55 +1,113 @@
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Breeze Uploader</title>
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+
+<!-- CSS-->
+<!-- Google web fonts. You can get your own bundle at http://www.google.com/fonts. Don't forget to update the CSS accordingly!-->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="js/flexslider/flexslider.css">
 <link rel="stylesheet" href="css/colorblocks-style.css">
-
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 <!-- end CSS-->
     
 <!-- JS-->
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
 <!-- end JS-->
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+</head>
+
+<body id="home">
+
+  
+<!-- header area -->
+    <header class="wrapper clearfix">
+	<nav id="topnav" role="navigation">
+
+		  <div class="menu-toggle">Beta v1.9</div> 
+		</nav> 
+        <div id="banner">        
+        	<div id="logo" style="padding-top=10px"><a href="index.html"><img src="img/logo-shadowpact.gif" alt="logo" ></a></div> 
+        </div>
+      
+  
+    </header><!-- end header -->  
+        <!-- main navigation -->
        
-        <title>Upload Form</title>
-    </head>
-    <body>
-        <div class="app">
-		<!--	<section id="page-header" class="clearfix"> 	   
-			<div class="wrapper">
-			<a href="index.html"><img src="img/button-home2.png" alt="logo" width="70px" height="60px" align="center"></a>
-			  <h1> Breeze Uploader</h1>
-			  </div> -->
-			
-			</section><!-- end hero area -->
+ 
+ 
+<!-- hero area (the grey one with a slider -->
+    <section id="page-header" class="clearfix">    
+   
+    <div class="wrapper">
+      <h2>Scene7 Image Uploader</h2>
+    </div>
+    </section><!-- end hero area -->
+
+
+
+
+
+<!-- main content area -->   
+   
+<div id="main" class="wrapper clearfix">    
+
+    <!-- sidebar -->    
+    <div class="div-menu">
+        <section id="page-header" class="clearfix">
+        <form method="POST" name="generate_token" id="generate_token" onSubmit="return generateToken();">
+			<div class="div-margin">                 
+				 <label><strong>Scene7 Secret Key</strong></label>
+				 <input type="text" value="ddc6c5c8-18f1-42ff-a311-0a32f819d446" size="40"/>
+				
+			</div>
+			<div class="div-margin">
+				<label><strong>Generate</strong></label>					
+				<input type="text" value="" size="40"/>
+			</div>
+			<div class="div-margin">
+				<input type="submit" value="Submit" class="menu-button--small">
+			</div>
+
+			</form>    
+                        
+           </section>       
             
-	<div class="menu-toggle">Generate Upload Token</div>
-	<aside>
-            <nav id="secondary-navigation">
-			<form method="POST" name="generate_token" id="generate_token" onSubmit="return generateToken();">
-			<table>                 
-				 <tr>
-					<td><strong>Scene7 Secret Key</strong></td>
-					<td>
-					<input type="text" value="ddc6c5c8-18f1-42ff-a311-0a32f819d446" size="40"/>
-					</td>
-				</tr>
-				</table>
-				<section id="page-header" class="clearfix">
-				<strong>Generate</strong>
-					
-					<input type="submit" value="Submit">
-					
-					<input type="text" value="" size="40"/>
-				</section>
-			
-			</form>
-             </nav>
-      </aside><!-- #end sidebar -->
-		<script language="javascript">
+      </div><!-- #end sidebar -->
+
+</div><!-- #end div #main .wrapper -->
+
+<!-- footer area -->    
+<footer>
+	<div id="colophon" class="wrapper clearfix">
+    	Copyright
+    </div>
+  
+</footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
+<script language="javascript">
 			function generateToken() {
 			
 				document.generate_token.action = "https://s7ugc3.scene7.com/ugc/image?op=get_uploadtoken&shared_secret=ddc6c5c8-18f1-42ff-a311-0a32f819d446"; 
@@ -58,8 +116,3 @@
 		</script>
 </body>
 </html>
-
-	
-	
-	
-
