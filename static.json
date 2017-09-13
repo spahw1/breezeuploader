@@ -1,4 +1,7 @@
 {
+  "root": "dist/"
+},
+{
   "routes": {
     "/**": "views/index.html"
   }
