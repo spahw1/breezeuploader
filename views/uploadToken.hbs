@@ -1,0 +1,67 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="stylesheets/normalize.css">
+<link rel="stylesheet" href="js/flexslider/flexslider.css">
+<link rel="stylesheet" href="stylesheets/colorblocks-style.css">
+<!-- end CSS-->
+    
+<!-- JS-->
+<script src="js/libs/modernizr-2.6.2.min.js"></script>
+<!-- end JS-->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+       
+        <title>Upload Form</title>
+    </head>
+    <body>
+        <div class="app">
+	<section id="page-header" class="clearfix"> 	   
+			<div class="wrapper">
+			<a href="/breezeUpload"><img src="images/button-home2.png" alt="logo" width="70px" height="60px" align="center"></a>
+			  <h1> Breeze Uploader</h1>
+			  </div> 
+			
+			</section><!-- end hero area -->
+            
+	<div class="menu-toggle">Generate Upload Token</div>
+	<aside>
+            <nav id="secondary-navigation">
+			<!-- <form method="POST" name="generate_token" id="generate_token" onSubmit="return generateToken();"> -->
+			<form action="/uploadToken" method="post">
+			<section id="page-header" class="clearfix">
+				<strong>Scene7 Secret Key</strong>					
+					<input type="text" value="ddc6c5c8-18f1-42ff-a311-0a32f819d446" size="40"/>
+				</section>	
+				<section id="page-header" class="clearfix">
+				<strong>Generated Token</strong>					
+					<input id="copytext" type="text" value="{{result.token}}" size="40" style="background-color: #72A4D2;" />
+					<textarea id="holdtext" STYLE="display:block;"></textarea>
+					<label onClick="ClipBoard();">Copy to Clipboard</label>
+
+				</section>			
+			</form>
+             </nav>
+      </aside><!-- #end sidebar -->
+		<script language="javascript">
+			function generateToken() {
+				document.generate_token.action = "https://s7ugc3.scene7.com/ugc/image?op=get_uploadtoken&shared_secret=ddc6c5c8-18f1-42ff-a311-0a32f819d446"; 
+				return true;
+			}
+
+			function ClipBoard() 
+			{
+				alert('hello');
+			holdtext.innerText = copytext.innerText;
+			Copied = holdtext.createTextRange();
+			Copied.execCommand("Copy");
+			}
+		</script>
+</body>
+</html>
+
+	
+	
+	
+

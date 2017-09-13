@@ -1,0 +1,65 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="js/flexslider/flexslider.css">
+<link rel="stylesheet" href="css/colorblocks-style.css">
+
+<!-- end CSS-->
+    
+<!-- JS-->
+<script src="js/libs/modernizr-2.6.2.min.js"></script>
+<!-- end JS-->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+       
+        <title>Upload Form</title>
+    </head>
+    <body>
+        <div class="app">
+		<!--	<section id="page-header" class="clearfix"> 	   
+			<div class="wrapper">
+			<a href="index.html"><img src="img/button-home2.png" alt="logo" width="70px" height="60px" align="center"></a>
+			  <h1> Breeze Uploader</h1>
+			  </div> -->
+			
+			</section><!-- end hero area -->
+            
+	<div class="menu-toggle">Generate Upload Token</div>
+	<aside>
+            <nav id="secondary-navigation">
+			<form method="POST" name="generate_token" id="generate_token" onSubmit="return generateToken();">
+			<table>                 
+				 <tr>
+					<td><strong>Scene7 Secret Key</strong></td>
+					<td>
+					<input type="text" value="ddc6c5c8-18f1-42ff-a311-0a32f819d446" size="40"/>
+					</td>
+				</tr>
+				</table>
+				<section id="page-header" class="clearfix">
+				<strong>Generate</strong>
+					
+					<input type="submit" value="Submit">
+					
+					<input type="text" value="" size="40"/>
+				</section>
+			
+			</form>
+             </nav>
+      </aside><!-- #end sidebar -->
+		<script language="javascript">
+			function generateToken() {
+			
+				document.generate_token.action = "https://s7ugc3.scene7.com/ugc/image?op=get_uploadtoken&shared_secret=ddc6c5c8-18f1-42ff-a311-0a32f819d446"; 
+				return true;
+			}
+		</script>
+</body>
+</html>
+
+	
+	
+	
+

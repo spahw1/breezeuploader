@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Breeze Uploader</title>
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+
+<!-- CSS-->
+<!-- Google web fonts. You can get your own bundle at http://www.google.com/fonts. Don't forget to update the CSS accordingly!-->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="stylesheets/normalize.css">
+<link rel="stylesheet" href="js/flexslider/flexslider.css">
+<link rel="stylesheet" href="stylesheets/colorblocks-style.css">
+
+<!-- end CSS-->
+    
+<!-- JS-->
+<script src="js/libs/modernizr-2.6.2.min.js"></script>
+<!-- end JS-->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+       
+        <title>Upload Form</title>
+    </head>
+    <body>
+        <div class="app">
+		<section id="page-header" class="clearfix"> 	   
+			<div class="wrapper">
+			<a href="/breezeUpload"><img src="images/button-home2.png" alt="logo" width="70px" height="60px" align="center"></a>
+			  <h1> Breeze Uploader</h1>
+			  </div> 
+			
+			</section><!-- end hero area -->
+            
+	<div class="menu-toggle">Upload Image To Scene7</div>
+		<form method="post" action="uploadForm">
+			<table class="current">				
+				<tr>
+					<td colspan="2"></td>
+				</tr>
+				<tr>
+					<td><strong> Company Name</strong></td><td>
+					<input type="text" value = "mandstest" size="15" name="company_name">
+					</td>
+				</tr>
+				<tr>
+					<td><strong> Upload Token </strong></td><td>
+					<input type="text" size="15" name="upload_token">
+					</td>
+				</tr>
+				<tr>
+					<td><strong> File Size Limit (in bytes) </strong></td><td>
+					<input type="text" size="15" value= "2000" name="file_limit">
+					&nbsp;bytes</td>
+				</tr>
+				<tr>
+					<td><strong> File Extensions allowed </strong></td><td>
+					<input type="text" value="JPG" size="15" name="file_exts">
+					</td>
+				</tr>
+				<!--<tr>
+					<td><strong> Preserve Color Profile</strong></td><td>
+					<input type="radio"  name="preserve_colorprofile" value="true">
+					Yes&nbsp;&nbsp;
+					<input type="radio"  name="preserve_colorprofile" value="false" checked>
+					No</td>
+				</tr>
+				<tr>
+					<td><strong> Preserve File Name</strong></td><td>
+					<input type="radio"  name="preserve_filename" value="true">
+					Yes&nbsp;&nbsp;
+					<input type="radio"  name="preserve_filename" value="false" checked>
+					No</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr display="none">
+					<td><strong> Knockout Background</strong></td><td>
+					<input type="radio"  name="knockout_background" value="true">
+					Yes&nbsp;&nbsp;
+					<input type="radio"  name="knockout_background" value="false" checked>
+					No</td>
+				</tr>
+				<!--<tr>
+					<td><strong> Corner</strong></td><td>
+					<input type="radio"  name="corner" value="ul" checked>
+					upperLeft&nbsp;&nbsp;
+					<input type="radio"  name="corner" value="ll">
+					lowerLeft&nbsp;&nbsp;
+					<input type="radio"  name="corner" value="ur">
+					upperRight&nbsp;&nbsp;
+					<input type="radio"  name="corner" value="ur">
+					lowerRight</td>
+				</tr>-->
+				<tr>
+					<td><strong> Tolerance</strong></td><td>
+					<input type="text" size="5" name="tolerance">
+					&nbsp;(value between 0 and 1)</td>
+				</tr>
+				<!--<tr style="display=none">
+					<td><strong> Fill Method</strong></td><td>
+					<input type="radio"  name="fill_method" value="ff" checked>
+					Flood Fill&nbsp;&nbsp;
+					<input type="radio"  name="fill_method" value="mp">
+					Match Pixel</td> 
+				</tr>-->
+				
+				<tr>
+					<td><strong>File to upload: : </strong></td>
+					<td>
+					<input name="filename" type="file" id="filename" size="58" maxlength="1024" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+				</tr>
+				<tr>
+					<td><strong>Click Submit to upload your image: </strong></td>
+					<td>
+					<input type="submit" value="Submit">
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+		 </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+		<script language="javascript">
+			function uploadImage() {
+	
+				document.image_upload.action = "https://s7ugc3.scene7.com/ugc/image?op=upload&company_name=" + document.image_upload.company_name.value + 
+												"&upload_token=" + document.image_upload.upload_token.value + 
+												"&file_limit=" + document.image_upload.file_limit.value + 
+												"&file_exts=" + document.image_upload.file_exts.value + 
+												"&preserve_colorprofile=Yes" + 
+												"&preserve_filename=Yes&use_corner=ul&knockout_background=false&fill_method=ff";
+				return true;
+			}
+		</script>
+
+</body>
+</html>
+
+	
+	
+	
+

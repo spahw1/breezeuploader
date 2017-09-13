@@ -1,0 +1,197 @@
+    <!-- *** TOPBAR ***
+ _________________________________________________________ -->
+    <div id="top">
+        {{> header}}
+    </div>
+
+    <!-- *** TOP BAR END *** -->
+
+    <!-- *** NAVBAR ***
+ _________________________________________________________ -->
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a class="navbar-brand home" href="/" data-animate-hover="bounce">
+                    <img src="images/logo.png" alt="Shadowpact logo" class="hidden-xs">
+                    <img src="images/logo-small.png" alt="Shadowpact logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle search</span>
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <a class="btn btn-default navbar-toggle" href="basket">
+                        <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
+                    </a>
+                </div>
+            </div>
+            <!--/.navbar-header -->
+
+            {{> topnav}}            
+
+            <!--/.nav-collapse -->
+
+            <div class="navbar-buttons">
+
+                <div class="navbar-collapse collapse right" id="basket-overview">
+                    <a href="basket" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                </div>
+                <!--/.nav-collapse -->
+
+                <div class="navbar-collapse collapse right" id="search-not-mobile">
+                    <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle search</span>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
+		    </span>
+                    </div>
+                </form>
+
+            </div>
+            <!--/.nav-collapse -->
+
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#navbar -->
+
+    <!-- *** NAVBAR END *** -->
+
+    <div id="all">
+
+        <div id="content">
+            <div class="container">
+
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a>
+                        </li>
+                        <li>About us</li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-3">
+                    <!-- *** PAGES MENU ***
+ _________________________________________________________ -->
+                    <div class="panel panel-default sidebar-menu">
+
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Pages</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <a href="about-us">Text page</a>
+                                </li>
+                                <li>
+                                    <a href="contact">Contact page</a>
+                                </li>
+                                <li>
+                                    <a href="faq">FAQ</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <!-- *** PAGES MENU END *** -->
+
+
+                    <div class="banner">
+                        <a href="#">
+                            <img src="images/banner.jpg" alt="sales 2014" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+
+
+                    <div class="box" id="contact">
+                        <h1>About us</h1>
+
+                        <p class="lead">Are you curious about knowing who we are? <br>
+                        Here you go with our rockstar team - The SHADOWPACT.</p>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h3><i class="thumb" href="images/raghav.jpg"></i> Raghav Arora </h3>
+                                <img class="img-responsive" alt="" src="images/raghav.jpg">
+                                <!-- <p>13/25 New Avenue</p> -->
+                            </div>
+                            <div class="col-sm-3">
+                                <h3><i class="thumb" href="images/amol.jpg"></i> Amol </h3>
+                                <img class="img-responsive" alt="" src="images/amol.jpg">
+                                <!-- <p>13/25 New Avenue</p> -->
+                            </div>
+                            <div class="col-sm-3">
+                                <h3><i class="thumb" href="images/arvind.jpg"></i> Arvind Kumar </h3>
+                                <img class="img-responsive" alt="" src="images/arvind.jpg">
+                                <!-- <p>13/25 New Avenue</p> -->
+                            </div>
+                            <div class="col-sm-3">
+                                <h3><i class="thumb" href="images/bharti.jpg"></i> Bharti Singla </h3>
+                                <img class="img-responsive" alt="" src="images/bharti.jpg">
+                                <!-- <p>13/25 New Avenue</p> -->
+                            </div>
+                            <div class="col-sm-3">
+                                <h3><i class="thumb" href="images/swati.jpg"></i> Swati </h3>
+                                <img class="img-responsive" alt="" src="images/swati.jpg">
+                                <!-- <p>13/25 New Avenue</p> -->
+                            </div>
+                            <div class="col-sm-3">
+                                <h3><i class="thumb" href="images/deepak.jpg"></i> Deepak Gupta </h3>
+                                <img class="img-responsive" alt="" src="images/deepak.jpg">
+                                <!-- <p>13/25 New Avenue</p> -->
+                            </div>
+                            <div class="col-sm-3">
+                                <h3><i class="thumb" href="images/ankit.jpg"></i> Ankit Misra </h3>
+                                <img class="img-responsive" alt="" src="images/ankit.jpg">
+                                <!-- <p>13/25 New Avenue</p> -->
+                            </div>
+                            <div class="col-sm-3">
+                                <h3><i class="thumb" href="images/detailbig1.jpg"></i> and more... </h3>
+                                <img class="img-responsive" alt="" src="images/detailsquare.jpg">
+                                <!-- <p>13/25 New Avenue</p> -->
+                            </div>
+                            <!-- /.col-sm-4 -->
+                        </div>
+                        <!-- /.row -->
+
+                    </div>
+
+                </div>
+                <!-- /.col-md-9 -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+    {{> footer}}
+
+
+    </div>
+    <!-- /#all -->

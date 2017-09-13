@@ -1,0 +1,160 @@
+ <!-- *** TOPBAR ***
+ _________________________________________________________ -->
+    <div id="top">
+        {{> header}}
+    </div>
+
+    <!-- *** TOP BAR END *** -->
+
+    <!-- *** NAVBAR ***
+ _________________________________________________________ -->
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a class="navbar-brand home" href="/" data-animate-hover="bounce">
+                    <img src="images/logo.png" alt="Shadowpact logo" class="hidden-xs">
+                    <img src="images/logo-small.png" alt="Shadowpact logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle search</span>
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <a class="btn btn-default navbar-toggle" href="basket">
+                        <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
+                    </a>
+                </div>
+            </div>
+            <!--/.navbar-header -->
+
+            {{> topnav}}            
+
+            <!--/.nav-collapse -->
+
+            <div class="navbar-buttons">
+
+                <div class="navbar-collapse collapse right" id="basket-overview">
+                    <a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                </div>
+                <!--/.nav-collapse -->
+
+                <div class="navbar-collapse collapse right" id="search-not-mobile">
+                    <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle search</span>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+			<button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
+		    </span>
+                    </div>
+                </form>
+
+            </div>
+            <!--/.nav-collapse -->
+
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#navbar -->
+
+    <!-- *** NAVBAR END *** -->
+
+    <div id="all">
+
+        <div id="content">
+            <div class="container">
+
+                <div class="col-md-12">
+
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a>
+                        </li>
+                        <li>New account / Sign in</li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6" id="new-account">
+                    <div class="box">
+                        <h1>New account</h1>
+
+                        <p class="lead">Not our registered customer yet?</p>
+                        <p>With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!</p>
+                        <p class="text-muted"><font color="red">{{#each .}} {{{errorMessage}}} {{/each}}</font></p>
+
+                        <hr>
+
+                        <form action="customer_account" method="post">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" name="firstName" id="firstName">
+                            </div>
+                            <div class="form-group">
+                                
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" name="email" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" id="password">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6" id="sign-in">
+                    <div class="box">
+                        <h1>Login</h1>
+
+                        <p class="lead">Already our customer?</p>
+                        <p Pellentesques<font habitant morbi tristique >enectus et netus et malesuada fames ac turpis egest</font>as. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+                            mi vitae est. Mauris placerat eleifend leo.</p>
+
+                        <hr>
+
+                        <form action="customer_orders" method="post">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" name="email" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" id="password">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+{{> footer}}
+
+    </div>
+    <!-- /#all -->
